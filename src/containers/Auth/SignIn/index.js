@@ -47,7 +47,6 @@ export default function SignInScreen({navigation}) {
         console.log(error);
         saetLoader(false);
       }
-      // CheckConnectivity();
     } else {
       const editErrorState = {...error};
       if (!Regex.validateEmail(email)) {

@@ -2,8 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {View} from 'react-native';
 import ContentView from '../../components/ContentView';
 import {Back} from '../../constants/assets';
-import {moderateScale} from '../../helpers/ResponsiveFonts';
-import colors from '../../constants/colors';
 import styles from './styles';
 import {GiftedChat} from 'react-native-gifted-chat';
 import auth from '@react-native-firebase/auth';
@@ -15,33 +13,6 @@ const ItemDetialsScreen = ({navigation, route}) => {
   const [messages, setMessages] = useState([]);
   const [sendMessage, setSendMessage] = useState('');
   const [userdata, setUserData] = useState({});
-
-  console.log('data!!!', userdata);
-
-  // useEffect(() => {
-  //   setMessages([
-  //     {
-  //       _id: 1,
-  //       text: 'Hello developer',
-  //       createdAt: new Date(),
-  //       user: {
-  //         _id: 2,
-  //         name: 'Native',
-  //         // avatar: 'https://placeimg.com/140/140/any',
-  //       },
-  //     },
-  //     {
-  //       _id: 3,
-  //       text: 'hye developer',
-  //       createdAt: new Date(),
-  //       user: {
-  //         _id: 4,
-  //         name: 'hye',
-  //         // avatar: 'https://placeimg.com/140/140/any',
-  //       },
-  //     },
-  //   ]);
-  // }, []);
 
   useEffect(() => {
     if (route.params) {
